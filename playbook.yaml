@@ -1,0 +1,11 @@
+- name: This playbook is for git and jenkins and ansible integration
+  hosts: all
+  tasks:
+  - name: Copy files 
+    copy:
+      src: /etc/passwd
+      dest: /tmp/passwd_copied_from_jenkins
+
+  - name: uptime of system
+    shell: uptime > /tmp/uptime
+    
